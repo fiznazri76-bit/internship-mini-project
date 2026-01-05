@@ -1,0 +1,24 @@
+command: [
+  "streamlit",
+  "run",
+  "app.py"
+]
+
+env:
+  - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
+    value: "false"
+  - name: DATABRICKS_SERVER_HOSTNAME
+    value: "adb-azuredatabricks.net"
+  - name: DATABRICKS_HTTP_PATH
+    value: " "
+  - name: DATABRICKS_TOKEN
+    value: " "
+  - name: OPENAI_ENDPOINT_NAME
+    value: " "
+
+pip_dependencies:
+  - streamlit==1.28.0
+  - databricks-sdk==0.23.0
+  - databricks-sql-connector==3.0.0
+  - pandas==2.0.3
+  - requests==2.32.0
